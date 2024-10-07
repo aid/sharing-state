@@ -1,0 +1,23 @@
+[package]
+name = "sharing-state"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8.5"
+tokio = { version = "=1.40", features = [
+    "rt-multi-thread",
+    "net",
+    "macros",
+    "time",
+    "sync",
+] }
+
+
+[[bin]]
+name = "sharing-state-async"
+path = "src/main-async.rs"
+
+[[bin]]
+name = "sharing-state-thread"
+path = "src/main-thread.rs"
